@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #79B0B0;
+  background: linear-gradient(bottom, rgba(9, 57, 97,1), rgba(189,242,242,.1));
+  background: -webkit-linear-gradient(bottom, rgba(9, 57, 97,1), rgba(189,242,242,.1));
+  background: -moz-linear-gradient(bottom, rgba(9, 57, 97,1), rgba(189,242,242,.1));
+}
+.boxdiv {
+  height: 400px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: rgb(109, 138, 138);
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: rgb(109, 138, 138);
+  margin: 0px 0 20px 0;
+}
+.newp {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.1));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.1));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.1));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 100px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("https://lh3.googleusercontent.com/lIJpnkS9m2WKo4mOGTnXh-fUN0_gUmJA2or3B4Rknx7iZVyJpMKGYmVHfbvciD-hnierLJpXFqW_u4guhEWxbPpiC9hPAhrlGEV3RRVJh-0pcM_oNSglEJkdnfYCWyoPjhiNVRhQ2N-kEUjTOYYcWmvZJbZhFJgth1pxhw4colBLvGoKZbBODE265VoYfXohXssPi8A-1Bxg4A-vKfLiH2DFs8HSrV-ZqGW24tvW4JAYkEOCmV_czIiEo9a-bEoX1Ax4W9VTMHSqSBoVK_5t3bNLXYNdC9NJROGEl_TjbKZ0TfdXxvIci8WEqascSmNveUGObPGtd1QiwySEl9AuTqv_H3K7jk1JUdP8X4tvFVsDdXJfz-QQjFGC_7ll4dY3W1nbK2MBGGxQGYfoNzVklqKoXSpPAJchwfyvGhDv-s50hE3fmS_-iJIIV8eSNHzIF3KeQipkz2zg84ZgBjowXcXCp8qTiXu5iVRC6uz5decKE1_dKVoS7tyqGjbX2IVxDacg1PSEVhVLsehCOf2buH9l0-fznuJzfJkAEflzNfgMsVpnCXMA-_mZrZzhEt9Wj8SDngPO9yXnxZSSA-hKWPbfH33xrqZgyRBxpMBBnmPHKuoXJEfZHSKx1-mEwSIrqiBKh0JazfRM336VBEJrKwxdGM_hSUvG1tJIpjA_GIZ4mCO4gv2y6Ia__ThpjrSMXOqoN69QCz5lnNDgWg2CrJA5=w1406-h937-no?authuser=0");
+}
+.second{
+  background-image: url("https://lh3.googleusercontent.com/dNLA2qrQNUOquAINYTLu4MXQpt4ekCt3uF4hYz652QzAcha4Gahn4vaEJFYp4yHjq2iSjfGSUjrJtEdkaGp0iNVEpwJIxu8_w3NG3ZIXgcRFuP30EZ4d1CpTStSGiTkcUWFj_Hqsx8EyuHhquxQ7muGvrThvGeiOtwsmSWJU9j12C00uN7PhcOXeKQB1DTqG8XV2DNVO5UoRfMmSoeWvWMKuuv2c9vdZP9toBUEqhZaew1NqxnCnm_xYUirota1D9PyGvD-P8fajfPozQJ2L1NCDBpgSza-JnQ83FdXI7AQaa-0NZgQQhC5cBq9FhdTfjy-5o-l-uXlPgRQtHcyB14CbJ2DWZMhTqEartDWiUfnCdkuFNXAGXvOu2C6gA0D6ag6tKVk57AZjP1eB_iq51HlDr1Jsku2aZ9undRpckj9FEnMaJSK9ViQ28L6US15ql3LltzqSc3ehjk8qSw7cijz25HQXE6zybqW5znhMsbWgpw41w_YWnxa4rsIdZGY2NaTPXDn_7aTg-z_r8rzm9OC7KOo5NF43gzO4UlQCiQrRJrC3V9uw7wYgSWOdY0kbYuwsGWwbC25D_97WSyvzS0p0EJl5S5xJYgjEY4lUPU7ka8UIN-ogumHUaUPkCrZqtwNIjIV9BVyDpKtnc_GEnHqtK9BtPiuwsZL-0lodo6UGglL5Nir77e0IElOysF34GoE7HdFfaZ0As29h38ItHOpz=w1406-h937-no?authuser=0");
+}
+.third{
+  background-image: url("https://lh3.googleusercontent.com/oPApW3ltj6cdDbFULFGQq_UaZtlZPK_RXheEbGGagQxerD9WArz_s4so137V0B8v3gY7Ct2lwgYSyoqM99WI6CRDxoQRJWHLK7mGEbL1ehMYotAS8YtEAH64OcFHv8qr88ycFpsAzWMg-de3dEoM79Oi9HbkweOyidqMgMtkgClAKwngxsn04Cs8Sc4AuTDLR9svTi1qZSkbjtHNhLOSnyNy3oOUwaZooQ4Uh6ci90wvrRI0LL8-Y7p944ugDpp-4Wf1Rn4rQjags-DwLBHgVVIN6HgGEna2eoSE5DYFbwniKqYGTPT8iQNDEkRrrFfUEwE2qlo7PrXnioIuBxMLMkXcZXsXs-NU1XeQsounRnrk2Gfj_vshpMs25uOgJGbOiv56L0RvZlKLa2XUAmr0Dxxyf9HpoR5aGoIkJTYV7cr0PXgnghIwknNRmPitpIsK3RZRtfZkjGss96W4JwJeddz2kStYJt1SZhIOJDba7Nbpc07Sctec4RfwxBLzLIlgyvP3LD3RpuaFQEf5DwquzyDmPy1WDdUAoehXbbEyxVDacwnfUaKDlWWjNQ_clqEJVWFanBYoPEFMNqcXOqjMFSH3s-eLti0ObA08Hy8xIOeXGcEXxkQ6gOem4SBaCNdaWyOmN-rjVp7Q5tOsQsauSWLlDEgdBY1k2rH17yQFtQIHA3hGJH4PthFG8Xtr2nX1wApx45QQn9jJw2Ku0No35SB5=w1406-h937-no?authuser=0");
+}
+.price {
+  float: right;
+}
+#header-tabs {
+  display: inline;
+  text-align: center;
+  margin: 0px;
+}
+li{
+  display:inline;
+  padding: 0px
+  text-align: center;
+  margin: 10px
+}
+#about-us {
+  color: white;
+  margin: 0 10px 0 10px;
+}
+#footer-contact {
+  color: white;
+  line-height: 2px;
+  padding: 20px 0 20px 0;
+  margin: 0 10px 0 10px;
+}
+a:link{
+  color:#797BD4;
+}
+a:visited {
+  color: #B5459D;  
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  .boxdiv {
+    margin: 20px 12px 0 12px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 235px;
+  }
+  .newp {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+  #vid {
+  width:256px;
+  height:144px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Mike's Acro Studio</h1>
+<h2>Take your first step on a new adventure!</h2>
+  <div id="header-tabs">
+    <ul>
+      <li><a href="#offerings">Offerings</a></li>
+      <li><a href="#about-us">About</a></li>
+      <li><a href="#footer-contact">Contact</a></li>
+    </ul>
+  </div>
+<div id="offerings">
+<div class="first boxdiv">
+  <p class="newp">Weekly Class <span class="price">$20</span><br />
+  <small>Our 1-hour weekly classes are held Mondays and Wednesdays at 7pm and is suitable for students of all levels. </small></p>
+</div>
+
+<div class="second boxdiv">
+  <p class="newp">Monthly workshop <span class="price">$50</span><br />
+  <small>Our 3-hour workshops, held every 3rd Saturday of the month @ 1pm. Learn a one minute flow with variations in complexity. Open level.</small></p>
+</div>
+  
+<div class="third boxdiv">
+  <p class="newp">Private Lesson <span class="price">$75</span><br />
+  <small>Private lesson with you and a partner. Develop the strength, communication skills, and techniques required to level up your practice!</small></p>
+</div>
+</div>
+
+<div id="about-us">
+  
+<h3>About Us</h3>
+<!--    
+  <iframe class="vid" width="426" height="240" src="https://youtu.be/Pu-SW-vQZzM"></iframe> -->
+  <a href="https://youtu.be/Pu-SW-vQZzM" target="_blank">Click here for our Intro video</a>
+</div>
+
+<footer id="footer-contact">
+<div >
+  <h3>Contact us! </h3>
+  <p>Phone: 718-867-5309</p>
+  <p>Email: MikesAcroStudio@gmail.com</p>
+  <p>Address: 123 Evergreen way, Elmwood
+</div>
+</footer>
+
+<script>
+  $('.boxdiv').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
