@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+<link href="/normalize.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Vollkorn+SC&display=swap" rel="stylesheet">
+  <title>Michael Van Le</title>
+  <style>
+    body {
+      text-align: center;
+      background: url("https://wallup.net/wp-content/uploads/2016/03/10/314449-photography-blue-water-lake-evening-dusk-748x468.jpg");
+      background-size: cover;
+      background-position: center;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1em;
+    }
+    #profile-picture {
+      border-radius: 50%;
+      border-width: 5px;
+      border-color: rgb(232,235,235);
+      border-style: solid;
+      width: ;
+      margin: 5em auto 0px auto;
+    }
+    p {
+      font-size: 22px;
+      color: rgb(232,235,235);
+      text-shadow: 0 0 20px black;
+    }
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 10px;
+    }
+    .button {
+      background: red;
+      color: white;
+    }
+    .button:hover {
+        border-radius: 3px;
+        transition: .5s;
+    }
+    @media (max-width: 600px) {
+      #profile-picture {
+        margin: 20px;
+        width: 60%;
+        border-width: 3px;
+      }
+      #profile-picture:hover{
+        transform: scale(1.1);
+        transition: 0.25s;
+        transition-timing-function: ease-in;
+      }
+      p {
+        margin: 0px 20px 20px 10px;
+        display: block;
+        font-size: 23px;
+      }
+      input {
+      border: 0;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img id="profile-picture" src="https://media-exp1.licdn.com/dms/image/C4D03AQFiL--_OXojzA/profile-displayphoto-shrink_800_800/0/1529267355649?e=1620864000&v=beta&t=IWWvqq-_pRy4KvDQUYKC6fPf3tysJYlilgBN0wMM__4" atl="profile picture of Michael Van Le">
+  <p>Hi! I'm Michael, a NYC-based, future full-stack coder. Say hello!</p>
+  <div>
+  <form action="#">
+    <label for="email">
+      <input id="email" type="email" placeholder="Your email" required>
+      <input class="button" type="submit">
+    </label>
+  </form>
+  </div>
+  <script>
+    $(".button").on("click", function() {
+      alert("Thank you! An email will go out shortly regarding next steps.")
+      });
+  </script>
+</body>

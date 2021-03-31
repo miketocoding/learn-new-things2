@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+  <link href="/normalize.css" rel="stylesheet">
+  <title>Mike's blog</title>
+  <style>
+    #masthead{
+      top: 0;
+      position: fixed;
+      width: 100%;
+      z-index: 2;
+      background: rgba(0,0,0,0);
+      text-align: center;
+      color: #FCFCFC;
+      margin: 0px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10px;
+      font-family: 'Bubblegum Sans', cursive;
+      text-shadow: 0 0 10px black;
+        
+    }
+    #box-container-about-me {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-column-gap: 30px;
+      grid-row-gap: 10px;
+      width: 100%;
+      justify-self: center;
+      height: px;
+      
+      
+    }
+    #main {
+      padding-top: 70px;
+      background: rgb(255, 234, 219);
+      
+    }
+    .abt-me-box {
+      width: 100%;
+      height: 100%;
+    }
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 30px;
+    }
+    .about-me-pic-box1 {
+      margin: 0px 0px 0px 0px;
+      border: 3px solid black;
+      border-radius: 0px;
+      max-width: 100%;
+      height: auto;
+    }
+    ul {
+      padding: 10px;
+      
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    article {
+      max-width: 800px;
+      padding: 20px;
+      margin: 0 auto;
+      text-align: justify;
+    }
+    @media (max-width: 500px) {
+       #masthead{
+         font-size: 12px;
+         
+       }
+      h1 {
+        font-size: 1px;
+        padding: 2px;
+      }
+      li {
+        padding: 1px;
+        display: block;
+      }
+      #box-container-about-me {
+        display: block;
+        
+      }
+      #main {
+        padding-top: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="masthead" class="site-header">
+    <div id="container1">
+      
+    </div>
+    <div id="container2">
+      <h1 style="font-size: 3em;">Mike's Blog</h1> 
+    </div>
+    <div id="container3">
+      <ul>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#favorite-travels">Favorite Travels</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+      </ul>
+    </div>
+  </header>
+  
+  <main id="main">
+  
+  <article>
+  <div id="box-container-about-me" class="abt-me-box">
+    <div >
+    <img class="about-me-pic-box1" src="https://media-exp1.licdn.com/dms/image/C4D03AQFiL--_OXojzA/profile-displayphoto-shrink_800_800/0/1529267355649?e=1620864000&v=beta&t=IWWvqq-_pRy4KvDQUYKC6fPf3tysJYlilgBN0wMM__4" alt="profile picture of Michael Van Le">
+    </div>
+    <div id"about-me-text-box2" class="abt-me-box">
+    <h2 id="about-me">About me</h2>
+    <p>I am an enthusiastic problem solver which often leads to excessive research about a subject matter. This has proven to be both a pro and a con as I like to understand everything there is about a topic before I act upon it.  <button>Like</button></p>
+    </div>
+    <div id="box3" class="abt-me-box">
+    <h2 id="favorite-travels">Favorite travels</h2>
+     <p>Two standout destinations from the past few years have been Costa Rica (Jan 2020) and Bryce canyon/ Zion National Park (May 2019). In Costa Rica, my partner and I rented a tiny 4x4 SUV and traveled to 6 locations over the course of 2 weeks. The first half of the trip took us to mountains, volcanos, cloud forests, and many waterfalls while the second half was pure coastline. We covered almost the entire western peninsula exploring tidepools and snorkeling in bath temperature waters.<p>Bryce Canyon and Zion were both stunning. The drastic temperature swings in Bryce Canyon often meant 70 degree days and sub-freezing nights. It is due to these constant temperature fluctuations that lead to erosion and the carving out of the massive canyon. A short drive away, Zion was in a completely different ecological area. It was beautiful to see how much water and time could shape the land.</p><button>Like</button></p>
+    </div>
+    <div class="abt-me-box">
+      <img class="about-me-pic-box1" src="https://static.wixstatic.com/media/f60807_4ea787136d5240389931776e15b0a1be~mv2.jpg/v1/fill/w_2000,h_2500,al_c,q_90,usm_0.66_1.00_0.01/f60807_4ea787136d5240389931776e15b0a1be~mv2.jpg" alt="Photo of La Fortuna, Costa Rica, hot spring">
+    </div>
+    <div class="abt-me-box">
+      <img class="about-me-pic-box1" src="https://instagram.fnyc1-1.fna.fbcdn.net/v/t51.2885-15/e35/14027394_871455166321748_1178618966_n.jpg?tp=1&_nc_ht=instagram.fnyc1-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=gWdr0ym1kPsAX_WaVyU&oh=145f9740cbd03a822c21d209a6b44297&oe=6079B518" alt="Photo of Michael doing Acroyoga">
+    </div>
+    <div Class="abt-me-box">
+      <h2 id="hobbies">Hobbies</h2>
+    <p>Acroyoga and rock climbing are my current hobbies of choice. For the past 5+ years, I have been practicing and teaching Acroyoga. The creativity of movement and connectivity in partnership are the main reasons it still resonates with me today. Practicing Acroyoga has always been a communicative act before a physical one and it is something, I continue to share with my students. In this partner activity, the only way progress is with proper and healthy communication.</p><p>Rock climbing, primarily roped climbing, has always felt like a puzzle to be solved. What is the most efficient way up the wall? Which hand holds/foot holds will hold my body at a proper angle to conserve the most energy and allow me to execute proper movement? These are questions I have before I even touch the wall and just the thought of problem solving is exhilarating.</p> <button>Like</button></p>
+    </div>
+  </div>
+
+  </main>
+  <script>
+    $("button").on("click", function() {
+      alert("Thanks for the like!");
+    });
+  </script>
+</body>
